@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Simple Collapse</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.7/angular.js" data-semver="1.2.7"></script>
+    <script src="app.js"></script>
+  </head>
+<body ng-controller="MainCtrl">
+<ul>
+  <li ng-repeat='ret in arr' ng-click="resetIt();ret.showIt=true;">
+    {{ret.name}}
+    <div ng-if="ret.showIt">
+      {{ret.desc}}
+    </div>
+  </li>
+</ul>
+</body>
+
+</html>
