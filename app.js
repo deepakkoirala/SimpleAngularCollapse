@@ -9,10 +9,7 @@ app.controller('MainCtrl', function($scope) {
     {name:"Head4",desc:"Head4Desc"}
     ];
     
-    $scope.resetIt = function(){
-      for(var i=0;i<$scope.arr.length;i++){
-        $scope.arr[i].showIt=false;
-      }
+    $scope.collapseIt = function(id){
+      $scope.collapseId = ($scope.collapseId==id)?-1:id;
     }
-    
 });

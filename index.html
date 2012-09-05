@@ -10,9 +10,9 @@
   </head>
 <body ng-controller="MainCtrl">
 <ul>
-  <li ng-repeat='ret in arr' ng-click="resetIt();ret.showIt=true;">
+  <li ng-repeat='ret in arr track by $index' ng-click="collapseIt($index)">
     {{ret.name}}
-    <div ng-if="ret.showIt">
+    <div ng-if="collapseId==$index">
       {{ret.desc}}
     </div>
   </li>
